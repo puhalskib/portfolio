@@ -53,12 +53,14 @@ function onTabClicked(str) {
         projectBtn.style.borderWidth = "0px";
         contactBtn.style.borderWidth = "0px";
     } else if(str == "contacts") {
+        window.location.href = "contacts.html"
         projectBtn.style.backgroundColor = '#404040';
         projectBtn.style.cursor = "pointer";
         contactBtn.style.backgroundColor = '#1E1E1E';
         contactBtn.style.cursor = "default";
         projectBtn.style.borderWidth = "0px";
         contactBtn.style.borderWidth = "0px";
+        
     }
 }
 
