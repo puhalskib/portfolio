@@ -1,0 +1,45 @@
+body {
+    margin: 0px;
+    font-family: 'Courier New', monospace; /* if consolas isn't available*/
+    font-family: Consolas,monaco,monospace;
+    background-color: #1E1E1E;
+}
+
+.navbar{
+    display: flex;
+    background-color: #282828;
+}
+
+.navbar div {
+    background-color: #404040;
+    text-align: center;
+    font-size: 28px;
+    padding: 15px;
+    border-style: solid;
+    border-color: #303030;
+    border-width:0px;
+    color:white;
+}
+.navbar div.projectscss {
+    color: #70C38D;
+    border-right-width:1px;
+}
+
+.navbar div.projectscss span {
+    color: #519ABA;
+}
+.navbar div.contactshtml {
+    color: #E2C08D;
+    border-left-width:1px;
+}
+.navbar div.contactshtml span {
+    color: #E17833;
+}
+.main {
+    text-align: center;
+    padding-top: 320px;
+    padding-bottom: 320px;
+}
+.main h1 {
+    font-size: 56px;
+}
