@@ -12,8 +12,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
         '&lt&gt',
         '&lt&gt',
         '&lt&gt',
-        '&lt&gt',
-        '&lt&gt',
         '&ltB&gt',
         '&ltBe&gt',
         '&ltBen&gt',
@@ -40,3 +38,27 @@ document.addEventListener('DOMContentLoaded', function (event) {
     }
     typeWriter(anim, 0);
 });
+
+const projectBtn = document.getElementById("projectscss");
+projectBtn.onclick = function() {onTabClicked("projects")};
+const contactBtn = document.getElementById("contactshtml");
+contactBtn.onclick = function() {onTabClicked("contacts")};
+
+function onTabClicked(str) {
+    if(str == "projects") {
+        projectBtn.style.backgroundColor = '#1E1E1E';
+        projectBtn.style.cursor = "default";
+        contactBtn.style.backgroundColor = '#404040';
+        contactBtn.style.cursor = "pointer";
+        projectBtn.style.borderWidth = "0px";
+        contactBtn.style.borderWidth = "0px";
+    } else if(str == "contacts") {
+        projectBtn.style.backgroundColor = '#404040';
+        projectBtn.style.cursor = "pointer";
+        contactBtn.style.backgroundColor = '#1E1E1E';
+        contactBtn.style.cursor = "default";
+        projectBtn.style.borderWidth = "0px";
+        contactBtn.style.borderWidth = "0px";
+    }
+}
+

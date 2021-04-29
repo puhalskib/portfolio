@@ -10,32 +10,38 @@ body {
     background-color: #282828;
 }
 
-.navbar div {
+.navbar button {
     background-color: #404040;
     text-align: center;
     font-size: 28px;
     padding: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
     border-style: solid;
     border-color: #303030;
     border-width: 0px;
     color: white;
+    font-family: 'Courier New', monospace;/* if consolas isn't available*/
+    font-family: Consolas, monaco, monospace;
+    cursor: pointer;
+    width: 33%;
 }
 
-.navbar div.projectscss {
+.navbar button.projectscss {
     color: #70C38D;
     border-right-width: 1px;
 }
 
-.navbar div.projectscss span {
+.navbar button.projectscss span {
     color: #519ABA;
 }
 
-.navbar div.contactshtml {
+.navbar button.contactshtml {
     color: #E2C08D;
     border-left-width: 1px;
 }
 
-.navbar div.contactshtml span {
+.navbar button.contactshtml span {
     color: #E17833;
 }
 
