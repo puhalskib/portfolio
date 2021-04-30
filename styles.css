@@ -27,9 +27,37 @@ body {
     width: 33%;
 }
 
+
+
+.navbar button.homejs {
+    border-right-width: 1px;
+    width: 8%;
+    transition-duration: all 0.4s;
+}
+
+.navbar button.homejs span {
+    color: #efd63e;
+    content: '';
+    transition: 0.4s;
+}
+
+.navbar button.homejs:hover {
+    width: 25%;
+    transition: 0.4s;
+}
+
+.navbar button.homejs:hover span:after {
+    content: '\00a0Home.js';
+    transition: 0.4s;
+}
+
+
+
+
 .navbar button.projectscss {
     color: #70C38D;
     border-right-width: 1px;
+    border-left-width: 1px;
 }
 
 .navbar button.projectscss span {
@@ -48,7 +76,7 @@ body {
 .main {
     text-align: center;
     padding-top: 320px;
-    font-size: 56px;
+    font-size: 42px;
 }
 
 .main h1 {
