@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', function (event) {
     const thisScript = document.getElementById("typewriter");
-    //var regstr = thisScript.getAttribute("data-text");
-    var regstr = '_/&lt/*/&gt/Ben #D0B344Puhalski#';
+    var regstr = thisScript.getAttribute("data-text");
+    //var regstr = '_/&lt/*/&gt/Ben #D0B344Puhalski#';
+    regstr = regstr.replaceAll('<','&lt');
+    regstr = regstr.replaceAll('>', '&gt');
+
     const name = document.getElementById(thisScript.getAttribute("data-id"));
 
         //'&ltBen <span style="color:#D0B344">Puhalski</span>&gt'
@@ -19,9 +22,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 str = str.substring(1);
             }
 
-            if(str.charAt(0) == '/') {
+            if(str.charAt(0) == '!') {
                 str = str.substring(1);
-                let n = str.search('/');
+                let n = str.search('!');
                 if(atEnd) {
                     outend += str.substring(0, n);
                 } else {
@@ -41,6 +44,13 @@ document.addEventListener('DOMContentLoaded', function (event) {
                     outend = '</span>' + outend;
                     inColor = true;
                 }
+            } else if(str.charAt(0) == '^') {
+                console.log("merge " + out + " with " + outend);
+                out += outend;
+                outend = '';
+                
+                nextCharTime = 0;
+                str = str.substring(1);
             } else {
                 if(atEnd) {
                     outend += str.charAt(0);
@@ -51,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
             }
             
             name.innerHTML = out + outend;
-            console.log(out + outend);
+            console.log(out + outend + "\n" + name.innerHTML);
             /*call function later*/
             setTimeout(function () {
                 typeWriter(str, out, outend, inColor);

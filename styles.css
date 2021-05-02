@@ -78,3 +78,12 @@ body {
 .main h1 {
     overflow: hidden;
 }
+
+
+#typecontact {
+    color: grey;
+}
+
+#typeproj {
+    color: #E2C08D;
+}
