@@ -32,23 +32,19 @@ body {
 .navbar button.homejs {
     border-right-width: 1px;
     width: 8%;
-    transition-duration: all 0.4s;
+    transition: 0.4s;
 }
 
 .navbar button.homejs span {
     color: #efd63e;
-    content: '';
-    transition: 0.4s;
 }
 
 .navbar button.homejs:hover {
     width: 25%;
-    transition: 0.4s;
 }
 
 .navbar button.homejs:hover span:after {
     content: '\00a0Home.js';
-    transition: 0.4s;
 }
 
 

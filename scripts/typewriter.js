@@ -1,32 +1,64 @@
 document.addEventListener('DOMContentLoaded', function (event) {
-    const anim = ['',
-        '&lt&gt',
-        '&lt&gt',
-        '&lt&gt',
-        '&lt&gt',
-        '&ltB&gt',
-        '&ltBe&gt',
-        '&ltBen&gt',
-        '&ltBen &gt',
-        '&ltBen <span style="color:#D0B344">P</span>&gt',
-        '&ltBen <span style="color:#D0B344">Pu</span>&gt',
-        '&ltBen <span style="color:#D0B344">Puh</span>&gt',
-        '&ltBen <span style="color:#D0B344">Puha</span>&gt',
-        '&ltBen <span style="color:#D0B344">Puhal</span>&gt',
-        '&ltBen <span style="color:#D0B344">Puhals</span>&gt',
-        '&ltBen <span style="color:#D0B344">Puhalsk</span>&gt',
-        '&ltBen <span style="color:#D0B344">Puhalski</span>&gt'
-    ]
-    const name = document.getElementById("typeanim");
+    const thisScript = document.getElementById("typewriter");
+    //var regstr = thisScript.getAttribute("data-text");
+    var regstr = '_/&lt/*/&gt/Ben #D0B344Puhalski#';
+    const name = document.getElementById(thisScript.getAttribute("data-id"));
 
-    function typeWriter(ar, i) {
-        if (i < ar.length) {
-            name.innerHTML = ar[i];
+        //'&ltBen <span style="color:#D0B344">Puhalski</span>&gt'
+    function typeWriter(str, out, outend, inColor) {
+        if (str.length > 0) {
+            var nextCharTime = 150;
+            var atEnd = false;
+            
+            if(str.charAt(0) == '_') {
+                nextCharTime = 0;
+                str = str.substring(1);
+            }
+            if(str.charAt(0) == '*') {
+                atEnd = true;
+                str = str.substring(1);
+            }
 
+            if(str.charAt(0) == '/') {
+                str = str.substring(1);
+                let n = str.search('/');
+                if(atEnd) {
+                    outend += str.substring(0, n);
+                } else {
+                    out += str.substring(0, n);
+                }
+                str = str.substring(n+1);
+            } else if(str.charAt(0) == '#') {
+                nextCharTime = 0;
+                if(inColor) {
+                    str = str.substring(1);
+                    out += '</span>'
+                    outend = outend.replace('</span>', '');
+                    inColor = false;
+                } else {
+                    out += '<span style="color:#' + str.substring(1, 7) + '">';
+                    str = str.substring(7);
+                    outend = '</span>' + outend;
+                    inColor = true;
+                }
+            } else {
+                if(atEnd) {
+                    outend += str.charAt(0);
+                } else {
+                    out += str.charAt(0);
+                }
+                str = str.substring(1);
+            }
+            
+            name.innerHTML = out + outend;
+            console.log(out + outend);
+            /*call function later*/
             setTimeout(function () {
-                typeWriter(ar, i + 1)
-            }, 150);
+                typeWriter(str, out, outend, inColor);
+            }, nextCharTime);
         }
     }
-    typeWriter(anim, 0);
+    typeWriter(regstr, '', '', false);
 });
+
+
