@@ -1,16 +1,12 @@
-document.addEventListener('DOMContentLoaded', function (event) {
-    const thisScript = document.getElementById("typewriter");
-    var regstr = thisScript.getAttribute("data-text");
-    //var regstr = '_/&lt/*/&gt/Ben #D0B344Puhalski#';
+
+function addTypewriter(regstr, name, speed) {
+    name = document.getElementById(name);
     regstr = regstr.replaceAll('<','&lt');
     regstr = regstr.replaceAll('>', '&gt');
-
-    const name = document.getElementById(thisScript.getAttribute("data-id"));
-
         //'&ltBen <span style="color:#D0B344">Puhalski</span>&gt'
     function typeWriter(str, out, outend, inColor) {
         if (str.length > 0) {
-            var nextCharTime = 150;
+            var nextCharTime = speed;
             var atEnd = false;
             
             if(str.charAt(0) == '_') {
@@ -68,7 +64,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
             }, nextCharTime);
         }
     }
+    console.log('typewriter start');
     typeWriter(regstr, '', '', false);
-});
 
 
+
+}

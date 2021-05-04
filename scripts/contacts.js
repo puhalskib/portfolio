@@ -10,3 +10,6 @@ function onTabClicked(str) {
         window.location.href = "index.html";
     }
 }
+
+addTypewriter('_!&lt;!*!&gt;!#6089B4Contacts#^_!&lt;!*!&gt;!!&#47;!#6089B4Contacts#',
+ 'typecontact', 120);

@@ -11,3 +11,4 @@ function onTabClicked(str) {
     }
 }
 
+addTypewriter('_!&lt!*!&gt!Ben #D0B344Puhalski#', 'typeanim', 150);

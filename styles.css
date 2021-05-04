@@ -71,15 +71,19 @@ body {
 
 .main {
     text-align: center;
-    padding-top: 200px;
+    padding-top: 50px;
     font-size: 42px;
 }
 
 .main h1 {
     overflow: hidden;
 }
-/*
-.main p {
+
+.main h1.anime{
+    padding-top: 150px;
+}
+
+.main p.desc {
     padding-left: 10%;
     padding-right: 10%;
     margin-top: 70px;
@@ -92,6 +96,13 @@ body {
     animation-fill-mode: forwards;
     animation-timing-function: ease;
 }
+.main p.projdesc {
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: left;
+    color:#bfbfbf;
+
+}
 
 @keyframes opacityup {
     from {
@@ -102,12 +113,14 @@ body {
         opacity: 1;
         transform: translateY(0px);
     }
-}*/
+}
 
 #typecontact {
     color: grey;
+    text-align: left;
 }
 
 #typeproj {
     color: #E2C08D;
+    text-align: left;
 }

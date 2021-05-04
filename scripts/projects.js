@@ -10,3 +10,9 @@ function onTabClicked(str) {
         window.location.href = "index.html";
     }
 }
+
+addTypewriter('.projects #ffffff_{}#', 'typeproj', 150);
+setTimeout(function() {
+addTypewriter('I have most experience in Java and C++ as well as ' +
+    'an active interest in javascript and other technologies.', 'typeExper', 22);
+}, 1800);
