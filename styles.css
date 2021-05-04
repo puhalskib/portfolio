@@ -71,14 +71,38 @@ body {
 
 .main {
     text-align: center;
-    padding-top: 320px;
+    padding-top: 200px;
     font-size: 42px;
 }
 
 .main h1 {
     overflow: hidden;
 }
+/*
+.main p {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 70px;
+    color: #bfbfbf;
+    text-align: left;
+    opacity: 0;
+    animation: opacityup;
+    animation-duration: 1s;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
 
+@keyframes opacityup {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}*/
 
 #typecontact {
     color: grey;
