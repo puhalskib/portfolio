@@ -11,5 +11,10 @@ function onTabClicked(str) {
     }
 }
 
-addTypewriter('_!&lt;!*!&gt;!#6089B4Contacts#^_!&lt;!*!&gt;!!&#47;!#6089B4Contacts#',
+addTypewriter('_!&lt;!*!&gt;!#6089B4Contact#',
  'typecontact', 120);
+setTimeout(function() {
+    addTypewriter('_!&lt;!*!&gt;!!&#47;!#6089B4Contact#', 'typecontact2', 120);
+}, 1600);
+
+ 

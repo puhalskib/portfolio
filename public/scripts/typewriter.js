@@ -3,7 +3,7 @@ function addTypewriter(regstr, name, speed) {
     name = document.getElementById(name);
     regstr = regstr.replaceAll('<','&lt');
     regstr = regstr.replaceAll('>', '&gt');
-        //'&ltBen <span style="color:#D0B344">Puhalski</span>&gt'
+    
     function typeWriter(str, out, outend, inColor) {
         if (str.length > 0) {
             var nextCharTime = speed;

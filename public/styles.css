@@ -92,7 +92,7 @@ body {
     opacity: 0;
     animation: opacityup;
     animation-duration: 1s;
-    animation-delay: 1.8s;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
     animation-timing-function: ease;
 }
@@ -120,7 +120,69 @@ body {
     text-align: left;
 }
 
+#typecontact2{
+    color: grey;
+    text-align: left;
+    font-size: 84px;
+    margin-bottom: 0px;
+}
+
 #typeproj {
     color: #E2C08D;
     text-align: left;
 }
+
+form {
+    background-color:#303030;
+    color:#bfbfbf;
+    margin: auto;
+    padding: 20px;
+    width: 600px;
+    opacity: 0;
+    animation: opacityup;
+    animation-duration: 0.7s;
+    animation-delay: 0.9s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+form *{
+    width: 100%;
+    font-size: 25px;
+    margin-bottom: 6px;
+}
+
+form input {
+    width: 69%;
+    border: none;
+    background-color: #303030;
+    border-bottom: 2px solid #1E1E1E;
+    color:#efd63e;
+    font-family: monospace;
+}
+
+form label {
+    font-size: 25px;
+    width: 29%;
+}
+
+form textarea {
+    color:#efd63e;
+    margin-top: 4px;
+    width: 99%;
+    height: 150px;
+    resize: vertical;
+    background-color: #303030;
+    border: solid 2px #1E1E1E;
+}
+
+input[type=submit] {
+    color:#70C38D;
+    cursor: pointer;
+    width: 20%;
+    background-color: #303030;
+    border: solid 2px #1E1E1E;
+    margin-left: 80%;
+    margin-right: 0;
+}
+
