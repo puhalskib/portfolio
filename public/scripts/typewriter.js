@@ -41,7 +41,6 @@ function addTypewriter(regstr, name, speed) {
                     inColor = true;
                 }
             } else if(str.charAt(0) == '^') {
-                console.log("merge " + out + " with " + outend);
                 out += outend;
                 outend = '';
                 
@@ -57,14 +56,12 @@ function addTypewriter(regstr, name, speed) {
             }
             
             name.innerHTML = out + outend;
-            console.log(out + outend + "\n" + name.innerHTML);
             /*call function later*/
             setTimeout(function () {
                 typeWriter(str, out, outend, inColor);
             }, nextCharTime);
         }
     }
-    console.log('typewriter start');
     typeWriter(regstr, '', '', false);
 
 
