@@ -11,29 +11,6 @@
             cursor: default;
         }
     </style>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/integration
-            emailjs.init('user_pGrsh3czJqcDEYQulI4Xj');
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
-                emailjs.sendForm('contact_service', 'template_h367pml', this)
-                    .then(function() {
-                        console.log('SUCCESS!');
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
 </head>
 
 <body>
@@ -48,8 +25,7 @@
         <h1 id="typecontact"></h1>
     </div>
     <div class="form-div">
-    <form id="contact-form">
-        <input type="hidden" name="contact_number">
+    <form name="contact" action="POST" data-netlify="true">
         <div>
             <label for="name">1 <span style="color:#6089B4">&#60;Name</span></label>
             <input type="text" id="name" name="name" placeholder="Enter name">
@@ -63,6 +39,7 @@
         <label for="message">3 <span style="color:#6089B4">&#60;Message&gt;</span></label>
         <textarea id="message" name="message" placeholder="Message"></textarea>
         <span style="color:#6089B4">&#60;&#47;Message&gt;</span>
+        <div data-netlify-recaptcha="true"></div>
         <div>
             <input type="submit" value="Send">
         </div>

@@ -104,6 +104,15 @@ body {
 
 }
 
+.main a.github-link{
+    opacity: 0;
+    animation: opacityup;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
 @keyframes opacityup {
     from {
         opacity: 0;
@@ -185,4 +194,5 @@ input[type=submit] {
     margin-left: 80%;
     margin-right: 0;
 }
+
 
