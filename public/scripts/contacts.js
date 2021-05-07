@@ -11,8 +11,7 @@ function onTabClicked(str) {
     }
 }
 
-addTypewriter('_!&lt;!*!&gt;!#6089B4Contact#',
- 'typecontact', 120);
+addTypewriter('_!&lt;!*!&gt;!#6089B4Contact#', 'typecontact', 120);
 setTimeout(function() {
     addTypewriter('_!&lt;!*!&gt;!!&#47;!#6089B4Contact#', 'typecontact2', 120);
 }, 1600);

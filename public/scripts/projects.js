@@ -11,8 +11,8 @@ function onTabClicked(str) {
     }
 }
 
-addTypewriter('.projects #ffffff_{}#', 'typeproj', 120);
+addTypewriter('.projects #ffffff_{}#', 'typeproj', 50);
 setTimeout(function() {
 addTypewriter('I have most experience in Java and C++ as well as ' +
-    'an active interest in javascript and other technologies.', 'typeExper', 22);
-}, 1400);
+    'an active interest in javascript and other technologies.', 'typeExper', 8);
+}, 800);

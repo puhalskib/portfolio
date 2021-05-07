@@ -3,10 +3,16 @@ function addTypewriter(regstr, name, speed) {
     name = document.getElementById(name);
     regstr = regstr.replaceAll('<','&lt');
     regstr = regstr.replaceAll('>', '&gt');
+    var frames = [];
+
     
+    
+    
+
+
     function typeWriter(str, out, outend, inColor) {
         if (str.length > 0) {
-            var nextCharTime = speed;
+            var nextCharTime = 1;
             var atEnd = false;
             
             if(str.charAt(0) == '_') {
@@ -55,15 +61,33 @@ function addTypewriter(regstr, name, speed) {
                 str = str.substring(1);
             }
             
-            name.innerHTML = out + outend;
+            //name.innerHTML = out + outend;
+            if(nextCharTime != 0) {
+                frames.push(out + outend);
+            }
             /*call function later*/
-            setTimeout(function () {
+            /*setTimeout(function () {
                 typeWriter(str, out, outend, inColor);
-            }, nextCharTime);
+            }, nextCharTime);*/
+            typeWriter(str, out, outend, inColor);
         }
     }
     typeWriter(regstr, '', '', false);
 
+    var lastUpdate = Date.now();
+    var myInterval = setInterval(tick, 0);
+
+    function tick() {
+        if((Date.now() - lastUpdate) > speed) {
+            lastUpdate += speed;
+            if(frames.length != 0) {
+                name.innerHTML = frames[0];
+                frames.shift();
+            } else {
+                clearInterval(myInterval);
+            }
+        }
+    }
 
 
 }

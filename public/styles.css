@@ -1,19 +1,31 @@
+html {
+    font-size: 16px;
+}
+
 body {
     margin: 0px;
+    background-color: #1E1E1E;
+}
+
+body * {
     font-family: 'Courier New', monospace;/* if consolas isn't available*/
     font-family: Consolas, monaco, monospace;
-    background-color: #1E1E1E;
 }
 
 .navbar {
     display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
     background-color: #282828;
+}
+
+.navbar * {
+    font-size: 2rem;
 }
 
 .navbar button {
     background-color: #404040;
     text-align: center;
-    font-size: 28px;
     padding: 15px;
     padding-left: 0px;
     padding-right: 0px;
@@ -21,8 +33,7 @@ body {
     border-color: #303030;
     border-width: 0px;
     color: white;
-    font-family: 'Courier New', monospace;/* if consolas isn't available*/
-    font-family: Consolas, monaco, monospace;
+    
     cursor: pointer;
     width: 33%;
 }
@@ -44,7 +55,7 @@ body {
 }
 
 .navbar button.homejs:hover span:after {
-    content: '\00a0Home.js';
+    content: '\00a0Home';
 }
 
 
@@ -72,7 +83,7 @@ body {
 .main {
     text-align: center;
     padding-top: 50px;
-    font-size: 42px;
+    font-size: 3rem;
 }
 
 .main h1 {
@@ -104,11 +115,11 @@ body {
 
 }
 
-.main a.github-link{
+.github-link, .github-link *{
     opacity: 0;
     animation: opacityup;
-    animation-duration: 1s;
-    animation-delay: 4s;
+    animation-duration: 0.6s;
+    animation-delay: 1.8s;
     animation-fill-mode: forwards;
     animation-timing-function: ease;
 }
@@ -116,7 +127,7 @@ body {
 @keyframes opacityup {
     from {
         opacity: 0;
-        transform: translateY(40px);
+        transform: translateY(3rem);
     }
     to {
         opacity: 1;
@@ -127,12 +138,13 @@ body {
 #typecontact {
     color: grey;
     text-align: left;
+    font-size: 5rem;
 }
 
 #typecontact2{
     color: grey;
     text-align: left;
-    font-size: 84px;
+    font-size: 5rem;
     margin-bottom: 0px;
 }
 
@@ -147,32 +159,32 @@ form {
     margin: auto;
     padding: 20px;
     width: 600px;
-    opacity: 0;
-    animation: opacityup;
-    animation-duration: 0.7s;
-    animation-delay: 0.9s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
+}
+.contact-form > div{
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 6px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-form *{
-    width: 100%;
-    font-size: 25px;
-    margin-bottom: 6px;
-}
 
 form input {
-    width: 69%;
+    width: 100%;
     border: none;
     background-color: #303030;
     border-bottom: 2px solid #1E1E1E;
     color:#efd63e;
-    font-family: monospace;
+    /*font-family: monospace;*/
+    font-size: 2rem;
 }
 
 form label {
-    font-size: 25px;
-    width: 29%;
+    color:#6089B4;
+    font-size: 2rem;
+    flex: auto;
+    padding-right: 1rem;
 }
 
 form textarea {
@@ -182,7 +194,9 @@ form textarea {
     height: 150px;
     resize: vertical;
     background-color: #303030;
-    border: solid 2px #1E1E1E;
+    border:none;
+    border-bottom: solid 2px #1E1E1E;
+    font-size: 2rem;
 }
 
 input[type=submit] {
@@ -196,3 +210,81 @@ input[type=submit] {
 }
 
 
+.form-div {
+    display: flex;
+    flex-direction:  row;
+    
+    opacity: 0;
+    animation: opacityup;
+    animation-duration: 0.7s;
+    animation-delay: 0.9s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+.contact-icons {
+    padding-top:1rem;
+    width: 29%; 
+    display:flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center;
+}
+.contact-icons > * {
+    margin: 1rem 0rem;
+}
+
+@media only screen and (max-width: 806px) {
+    /* For smaller screens / phones: */
+    html{
+        font-size: 12px;
+    }
+    .form-div {
+        flex-direction: column;
+        width: 200px;
+    }
+    .contact-icons {
+        padding-top:0rem;
+        width: 100%;
+        flex-direction:row;
+        justify-content: center;
+        order: 2;
+    }
+    .contact-icons > * {
+        margin: 1rem 1rem 0rem 1rem;
+    }
+    #typecontact2 {
+        margin-top: 2rem;
+    }
+    .main h1.anime{
+        margin-top:0px;
+        padding-top:0px;
+    }
+    .navbar {
+        flex-direction: column;
+    }
+    .navbar * {
+        font-size:3rem;
+    }
+    .navbar button{
+        width: 100%;
+    }
+    .navbar button.homejs{
+        width: 100%;
+    }
+    .navbar button.homejs:hover {
+        width: 100%;
+    }
+    
+    .navbar button.homejs span:after {
+        content: '\00a0Home';
+    }
+    input[type=submit] {
+        margin-left:0px;
+    }
+}
+@media only screen and (min-width: 1250px) {
+    /* For larger screens: */
+    .navbar *{
+        font-size: 4rem;
+    }
+}

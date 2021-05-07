@@ -4,6 +4,7 @@
 <head>
     <title>contact.html</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <style>
         .navbar button.contactshtml {/*active*/
@@ -16,29 +17,35 @@
 <body>
     <div class="navbar">
         <button id="homejs" class="homejs"><b><span>{}</span></b></button>
-        <button id="projectscss" class="projectscss"><b><span># </span></b>Projects.css</button>
-        <button id="contactshtml" class="contactshtml"><b><span>&lt&gt </span></b>Contact.html</button>
+        <button id="projectscss" class="projectscss"><b><span># </span></b>Projects</button>
+        <button id="contactshtml" class="contactshtml"><b><span>&lt&gt </span></b>Contact</button>
     </div>
 
 
-    <div class="main">
+    <div class="main" style="padding-top: 0px">
         <h1 id="typecontact"></h1>
     </div>
+
     <div class="form-div">
-    <form name="contact" action="POST" data-netlify="true">
+        <div class="contact-icons">
+            <a href="https://www.linkedin.com/in/ben-puhalski-330981195/"><img src="img/linkedin-icon.svg" alt="linkedin" style="width: 5rem;"></a>
+            <a href="https://github.com/puhalskib"><img src="img/github-icon.svg" alt="github" style="width: 5rem;"></a>
+            <a href="https://www.facebook.com/ben.puhalski/"><img src="img/facebook-icon.svg" alt="facebook" style="width: 5rem;"></a>
+        </div>
+    <form class="contact-form"name="contact" action="POST" data-netlify="true">
         <div>
-            <label for="name">1 <span style="color:#6089B4">&#60;Name</span></label>
+            <label for="name">&#60;Name</span></label>
             <input type="text" id="name" name="name" placeholder="Enter name">
             <span style="color:#6089B4">&gt;</span>
         </div>
         <div>
-            <label for="email">2 <span style="color:#6089B4">&#60;Email</span></label>
+            <label for="email">&#60;Email</span></label>
             <input type="email" id="email" name="email" placeholder="Email">
             <span style="color:#6089B4">&gt;</span>
         </div>
-        <label for="message">3 <span style="color:#6089B4">&#60;Message&gt;</span></label>
+        <label for="message">&#60;Message&gt;</span></label>
         <textarea id="message" name="message" placeholder="Message"></textarea>
-        <span style="color:#6089B4">&#60;&#47;Message&gt;</span>
+        <p style="color:#6089B4; font-size:2rem; margin:0px;">&#60;&#47;Message&gt;</p>
         <div data-netlify-recaptcha="true"></div>
         <div>
             <input type="submit" value="Send">
