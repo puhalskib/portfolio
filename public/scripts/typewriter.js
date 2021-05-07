@@ -6,10 +6,6 @@ function addTypewriter(regstr, name, speed) {
     var frames = [];
 
     
-    
-    
-
-
     function typeWriter(str, out, outend, inColor) {
         if (str.length > 0) {
             var nextCharTime = 1;

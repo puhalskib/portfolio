@@ -28,11 +28,11 @@
 
     <div class="form-div">
         <div class="contact-icons">
-            <a href="https://www.linkedin.com/in/ben-puhalski-330981195/"><img src="img/linkedin-icon.svg" alt="linkedin" style="width: 5rem;"></a>
-            <a href="https://github.com/puhalskib"><img src="img/github-icon.svg" alt="github" style="width: 5rem;"></a>
-            <a href="https://www.facebook.com/ben.puhalski/"><img src="img/facebook-icon.svg" alt="facebook" style="width: 5rem;"></a>
+            <a class="icon-1" href="https://www.linkedin.com/in/ben-puhalski-330981195/"><img src="img/linkedin-icon.svg" alt="linkedin" style="width: 5rem;"></a>
+            <a class="icon-2" href="https://github.com/puhalskib"><img src="img/github-icon.svg" alt="github" style="width: 5rem;"></a>
+            <a class="icon-3" href="https://www.facebook.com/ben.puhalski/"><img src="img/facebook-icon.svg" alt="facebook" style="width: 5rem;"></a>
         </div>
-    <form class="contact-form"name="contact" action="POST" data-netlify="true">
+    <form class="contact-form" name="contact-form-name" action="POST" data-netlify="true">
         <div>
             <label for="name">&#60;Name</span></label>
             <input type="text" id="name" name="name" placeholder="Enter name">
@@ -47,8 +47,8 @@
         <textarea id="message" name="message" placeholder="Message"></textarea>
         <p style="color:#6089B4; font-size:2rem; margin:0px;">&#60;&#47;Message&gt;</p>
         <div data-netlify-recaptcha="true"></div>
-        <div>
-            <input type="submit" value="Send">
+        <div class="send-div">
+            <button type="submit">Send</button>
         </div>
     </form>
     </div>
